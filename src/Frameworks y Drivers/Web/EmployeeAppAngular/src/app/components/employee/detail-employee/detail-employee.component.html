@@ -1,0 +1,39 @@
+<!--<div class="detail">
+
+  <div class="title">
+    <h1>Ver Empleado</h1>
+  </div>
+
+  <div class="container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Name</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button>Asignar a Tienda</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-grid-list cols="2" rowHeight="80px">
+      <mat-grid-tile>type</mat-grid-tile>
+      <mat-grid-tile>telephone</mat-grid-tile>
+      <mat-grid-tile [colspan]='2'>address</mat-grid-tile>
+      <mat-grid-tile>employmentDate</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</div>-->
+<h2 mat-dialog-title>Detalle del Empleado</h2>
+<mat-dialog-content class="mat-typography">
+  <mat-card class="card">
+    <mat-card-title>{{ employee.name }}</mat-card-title>
+    <mat-card-content>
+      <p><strong>Tipo:</strong> {{ employee.type }} </p>
+      <p><strong>Telefono:</strong> {{ employee.telephone }} </p>
+      <p><strong>Direccion:</strong> {{ employee.address }} </p>
+      <p><strong>Fecha:</strong> {{ employee.employmentDate }}</p>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>  
+</mat-dialog-actions>

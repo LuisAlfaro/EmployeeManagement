@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.74-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm start</StartupCommand>
+    <JavaScriptTestFramework>Jasmine</JavaScriptTestFramework>
+    <!-- Command to run on project build -->
+    <BuildCommand>
+    </BuildCommand>
+    <!-- Command to create an optimized build of the project that's ready for publishing -->
+    <ProductionBuildCommand>npm run build</ProductionBuildCommand>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\EmployeeAppAngular</BuildOutputFolder>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\app\components\employee\" />
+    <Folder Include="src\app\components\employee-type\" />
+    <Folder Include="src\app\components\employee-shop\" />
+    <Folder Include="src\app\components\shop\" />
+    <Folder Include="src\app\interfaces\" />
+    <Folder Include="src\app\shared\" />
+    <Folder Include="src\app\services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="src\app\components\employee\create-edit-employee\qtvgc3dv.wzr~" />
+  </ItemGroup>
+</Project>

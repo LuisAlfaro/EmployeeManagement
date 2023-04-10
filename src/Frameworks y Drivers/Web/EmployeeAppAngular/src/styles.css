@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title {
+  padding: 30px;
+  background-color: #666;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  margin: 0 20%;
+}
+
+/*Card*/
+.card{
+    margin-top:5px;    
+}
+
+/*List Styles*/
+.list table {
+  width: 100%;
+}
+
+.list td, th {
+  width: 15%;
+}
+
+.list .mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.list .delete {
+  cursor: pointer;
+  color: #E15639;
+}
+
+.list .edit {
+  cursor: pointer;
+  color: #1878B0;
+}
+
+.list .view {
+  cursor: pointer;
+}
+
+.list .agregar {
+  font-size: 10px;
+  line-height: 28px;
+}
+

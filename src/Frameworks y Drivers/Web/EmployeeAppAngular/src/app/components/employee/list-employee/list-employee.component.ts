@@ -3,10 +3,12 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Employee } from '../../../interfaces/employee';
+import { EmployeeShop } from '../../../interfaces/employee-shop';
 import { EmployeeService } from '../../../services/employee.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DetailEmployeeComponent } from '../detail-employee/detail-employee.component';
 import { CreateEditEmployeeComponent } from '../create-edit-employee/create-edit-employee.component';
+import { AssingEmployeeShopComponent } from '../../employee-shop/assing-employee-shop/assing-employee-shop.component';
 
 @Component({
   selector: 'app-list-employee',
@@ -21,7 +23,7 @@ export class ListEmployeeComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _employeeServices: EmployeeService, public dialog: MatDialog) { }
+  constructor(private _employeeService: EmployeeService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getEmployees();
@@ -29,10 +31,8 @@ export class ListEmployeeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-    if (this.dataSource.data.length > 0) {
-      this.paginator._intl.itemsPerPageLabel = 'Items por pagina';
-    }
+    this.dataSource.sort = this.sort;    
+    this.paginator._intl.itemsPerPageLabel = '';    
   }
 
   applyFilter(event: Event) {
@@ -41,7 +41,7 @@ export class ListEmployeeComponent implements OnInit, AfterViewInit {
   }
 
   getEmployees() {
-    this._employeeServices.getEmployees().subscribe(data => {      
+    this._employeeService.getEmployees().subscribe(data => {      
       this.dataSource.data = data;
     })
   }
@@ -77,10 +77,29 @@ export class ListEmployeeComponent implements OnInit, AfterViewInit {
 
   deleteEmployee(id: number, name: string) {
     if (confirm("Esta seguro que desea eliminar el empleado" + name)) {
-      this._employeeServices.deleteEmployee(id).subscribe(() => {
+      this._employeeService.deleteEmployee(id).subscribe(() => {
         this.getEmployees();
       });
     }
+  }
+
+  openAssingDialog(idEmployee: number) {
+    var employeeShop: EmployeeShop = {
+      id : 0,
+      idEmployee: idEmployee,
+      idShop: 0,     
+      date: new Date(),
+      isSupervisor: false
+    };
+    const dialogRef = this.dialog.open(AssingEmployeeShopComponent, {
+      data: employeeShop,
+      height: '400px',
+      width: '600px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

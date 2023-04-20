@@ -60,19 +60,24 @@
     <Folder Include="Index" />
     <Folder Include="Data" />
     <Folder Include="Procedures" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Employee.sql" />
     <Build Include="Tables\EmployeeType.sql" />
     <Build Include="Tables\Shop.sql" />
-    <Build Include="Tables\Employee_Shop.sql" />
+    <Build Include="Tables\EmployeeShop.sql" />
     <Build Include="Index\UQ_Shop_Supervisor.sql" />
     <Build Include="Procedures\GetAllEmployees.sql" />
+    <Build Include="Procedures\GetAssigenedEmployee.sql" />
+    <Build Include="Views\vGetActualSupervisorCount.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\InsertEmployee.sql" />
     <None Include="Data\InsertEmployeeType.sql" />
     <None Include="Data\InsertShop.sql" />
+    <None Include="Data\InsertEmployeeShop.sql" />
+    <None Include="Database.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="Database.refactorlog" />

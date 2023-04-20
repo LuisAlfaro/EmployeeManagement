@@ -7,7 +7,8 @@ namespace Domain.Interfaces.Repositories
         EmployeeType GetEmployeeType(int idEmployeeType);
         IEnumerable<EmployeeType> GetEmployeeTypes();
         void CreateEmployeeType(EmployeeType employeeType);
-        void UpdateEmployeeType(EmployeeType employeeType);        
-        
+        void UpdateEmployeeType(EmployeeType employeeType);
+        void DeleteEmployeeType(int idEmployeeType);
+
     }
 }

@@ -1,0 +1,18 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/Application Business Rules/Application
+/src/Enterprise Business Rules/Domain
+/src/Frameworks y Drivers/Database/bin/Debug
+/src/Frameworks y Drivers/Database/obj/Debug
+/src/Frameworks y Drivers/Database/Database.publish.xml
+/src/Frameworks y Drivers/Database/Database.jfm
+/src/Frameworks y Drivers/Database/Database.dbmdl
+/src/Frameworks y Drivers/UIs/WebApi/bin/Debug/net7.0/runtimes/unix/lib
+/src/Frameworks y Drivers/UIs/WebApi/bin/Debug/net7.0
+/src/Frameworks y Drivers/UIs/WebApi/obj
+/src/Interface Adapters/Controllers/bin/Debug/net7.0/Application.dll
+/src/Interface Adapters
+/src/Frameworks y Drivers/Web/EmployeeAppAngular/obj/Debug

@@ -1,0 +1,50 @@
+<h2 mat-dialog-title>Asignar Empleado a una Tienda</h2>
+<form [formGroup]="form"  (ngSubmit)="assingEditEmployeeShop()">
+  <mat-dialog-content class="mat-typography">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-subtitle>Datos del Empleado</mat-card-subtitle>
+      </mat-card-header>
+      <mat-grid-list cols="2" rowHeight="80px">
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Empleado</mat-label>
+            <mat-select formControlName="idEmployee">
+              <mat-option *ngFor="let employee of employees" [value]="employee.id">
+                {{employee.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Tienda</mat-label>
+            <mat-select formControlName="idShop">
+              <mat-option *ngFor="let shop of shops" [value]="shop.id">
+                {{shop.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Fecha</mat-label>
+            <input formControlName="date" matInput type="date" autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-checkbox formControlName="isSupervisor">Es Supervisor?</mat-checkbox>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions align="center">
+    <button [disabled]="form.invalid" type="submit" class="btnAceptar" mat-raised-button color="primary" mat-dialog-close>Aceptar</button>
+    <button mat-raised-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</form>

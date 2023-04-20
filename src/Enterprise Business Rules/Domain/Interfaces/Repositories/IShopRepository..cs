@@ -5,9 +5,11 @@ namespace Domain.Interfaces.Repositories
     public interface IShopRepository
     {
         Shop GetShop(int idShop);
-        IEnumerable<Shop> GetShop();
+        IEnumerable<Shop> GetShops();
         void CreateShop(Shop shop);
-        void UpdateShop(Shop shop);       
-       
+        void UpdateShop(Shop shop);
+        void DeleteShop(int idShop);
+
+
     }
 }

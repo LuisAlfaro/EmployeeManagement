@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog'
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
@@ -37,6 +38,7 @@ import { MatDialogModule } from '@angular/material/dialog'
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
+    MatCheckboxModule,
   ],
   exports: [
     CommonModule,
@@ -54,6 +56,7 @@ import { MatDialogModule } from '@angular/material/dialog'
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule,
+    MatCheckboxModule,
   ]
 })
 export class SharedModule { }

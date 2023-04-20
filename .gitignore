@@ -24,3 +24,5 @@
 /.vs/EmployeeManagement
 /.vs/ProjectEvaluation
 /src/Frameworks y Drivers/Database/Database.publish.xml
+/src/Frameworks y Drivers/Database/Database.dbmdl
+/src/Frameworks y Drivers/Database/Database.jfm

@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="src\app\components\employee\" />
     <Folder Include="src\app\components\employee-type\" />
-    <Folder Include="src\app\components\employee-shop\" />
     <Folder Include="src\app\components\shop\" />
     <Folder Include="src\app\interfaces\" />
     <Folder Include="src\app\shared\" />

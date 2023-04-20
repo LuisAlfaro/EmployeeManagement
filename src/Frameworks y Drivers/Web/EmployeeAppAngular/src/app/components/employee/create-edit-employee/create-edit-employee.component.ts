@@ -2,6 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Employee } from '../../../interfaces/employee';
+import { EmployeeType } from '../../../interfaces/employee-type';
+import { EmployeeTypeService } from '../../../services/employee-type.service';
 import { EmployeeService } from '../../../services/employee.service';
 
 @Component({
@@ -12,11 +14,13 @@ import { EmployeeService } from '../../../services/employee.service';
 export class CreateEditEmployeeComponent implements OnInit{
   form: FormGroup;
   id: number;
+  employeeTypes: EmployeeType[] = [];
 
   operacion: string = 'Agregar';
  
   constructor(private formBuilder: FormBuilder,
     private _employeeService: EmployeeService,
+    private _employeeTypeService: EmployeeTypeService,
     public dialogRef: MatDialogRef<CreateEditEmployeeComponent>,
     @Inject(MAT_DIALOG_DATA) public data: number) {
     this.form = this.formBuilder.group({
@@ -31,14 +35,14 @@ export class CreateEditEmployeeComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.getEmployeeTypes();
       if (this.id != 0) {
         this.operacion = 'Editar';
-        this.obtenerMascota(this.id)
+        this.getEmployee(this.id);
       }
   }
 
-  obtenerMascota(id: number) {
-  
+  getEmployee(id: number) {  
     this._employeeService.getEmployee(id).subscribe(data => {
       this.form.setValue({
         name: data.name,
@@ -46,8 +50,8 @@ export class CreateEditEmployeeComponent implements OnInit{
         telephone: data.telephone,
         address: data.address,
         employmentDate: data.employmentDate,
-      })  
-    })
+      });
+    });
   }
      
   createEditEmployee() {
@@ -68,15 +72,17 @@ export class CreateEditEmployeeComponent implements OnInit{
   }
 
   editEmployee(id: number, employee: Employee) {
-    this._employeeService.updateEmployee(id, employee).subscribe(() => {
-      
-    })
+    this._employeeService.updateEmployee(id, employee).subscribe(() => { });
   }
 
   createEmployee(employee: Employee) {
-    this._employeeService.createEmployee(employee).subscribe(data => {
-            
-    })
+    this._employeeService.createEmployee(employee).subscribe(data => { });
+  }
+
+  getEmployeeTypes() {
+    this._employeeTypeService.getEmployeeTypes().subscribe(data => {
+      this.employeeTypes = data
+    });
   }
 
 }

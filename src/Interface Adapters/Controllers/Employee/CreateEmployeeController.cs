@@ -5,7 +5,7 @@ using Presenters;
 
 namespace Controllers.Employee
 {
-    [Route("api/employee")]
+    [Route("api/employee/")]
     [ApiController]
     public class CreateEmployeeController
     {

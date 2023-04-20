@@ -19,6 +19,9 @@ namespace DataAccessEF
                 ));
 
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IEmployeeTypeRepository, EmployeeTypeRepository>();
+            services.AddScoped<IEmployeeShopRepository, EmployeeShopRepository>();
+            services.AddScoped<IShopRepository, ShopRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }

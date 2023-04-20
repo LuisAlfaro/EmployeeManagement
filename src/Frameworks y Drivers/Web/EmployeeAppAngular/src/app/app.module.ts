@@ -16,6 +16,7 @@ import { ListEmployeeTypeComponent } from './components/employee-type/list-emplo
 import { ListEmployeeShopComponent } from './components/employee-shop/list-employee-shop/list-employee-shop.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AssingEmployeeShopComponent } from './components/employee-shop/assing-employee-shop/assing-employee-shop.component';
 
 
 
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DetailEmployeeComponent,
     ListShopComponent,
     ListEmployeeTypeComponent,
-    ListEmployeeShopComponent
+    ListEmployeeShopComponent,
+    AssingEmployeeShopComponent
   ],
   imports: [
     BrowserModule,

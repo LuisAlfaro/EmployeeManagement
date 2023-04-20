@@ -2,17 +2,28 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
-/src/Application Business Rules/Application
-/src/Enterprise Business Rules/Domain
-/src/Frameworks y Drivers/Database/bin/Debug
+/src/Interface Adapters/Presenters/obj
+/src/Interface Adapters/Presenters/bin/Debug/net7.0
+/src/Interface Adapters/Gateways/IoC/obj
+/src/Interface Adapters/Gateways/IoC/bin/Debug/net7.0
+/src/Interface Adapters/Gateways/DataAccessEF/obj
+/src/Interface Adapters/Gateways/DataAccessEF/bin/Debug/net7.0
+/src/Interface Adapters/Controllers/obj
+/src/Interface Adapters/Controllers/bin/Debug/net7.0
+/src/Application Business Rules/Application/obj
+/src/Application Business Rules/Application/bin/Debug/net7.0
+/src/Enterprise Business Rules/Domain/obj
+/src/Enterprise Business Rules/Domain/bin/Debug/net7.0
 /src/Frameworks y Drivers/Database/obj/Debug
+/src/Frameworks y Drivers/Database/bin/Debug
+/src/Frameworks y Drivers/UIs/WebApi/obj
+/src/Frameworks y Drivers/UIs/WebApi/bin/Debug/net7.0
+/src/Frameworks y Drivers/Web/EmployeeAppAngular/obj/Debug/EmployeeAppAngular.esproj.SuggestedBindingRedirects.cache
+/src/Frameworks y Drivers/Web/EmployeeAppAngular/obj/Debug/EmployeeAppAngular.esproj.FileListAbsolute.txt
+/src/Frameworks y Drivers/Web/EmployeeAppAngular/obj/Debug/EmployeeAppAngular.esproj.CoreCompileInputs.cache
+/.vs/EmployeeManagement
+/.vs/ProjectEvaluation
 /src/Frameworks y Drivers/Database/Database.publish.xml
 /src/Frameworks y Drivers/Database/Database.jfm
 /src/Frameworks y Drivers/Database/Database.dbmdl
-/src/Frameworks y Drivers/UIs/WebApi/bin/Debug/net7.0/runtimes/unix/lib
-/src/Frameworks y Drivers/UIs/WebApi/bin/Debug/net7.0
-/src/Frameworks y Drivers/UIs/WebApi/obj
-/src/Interface Adapters/Controllers/bin/Debug/net7.0/Application.dll
-/src/Interface Adapters
-/src/Frameworks y Drivers/Web/EmployeeAppAngular/obj/Debug
+/src/Frameworks y Drivers/Database/Database.jfm
